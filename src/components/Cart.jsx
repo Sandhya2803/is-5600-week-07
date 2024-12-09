@@ -1,18 +1,17 @@
 import React, { useContext } from 'react';
 import PurchaseForm from './PurchaseForm';
+import {useCart} from '../state/CartProvider' 
 
-const Cart = () => {
-  // TODO - get cart items from context
-  const cartItems = [];
-  const removeFromCart = () => {};
-  const updateItemQuantity = () => {};
-  const getCartTotal = () => {};
-
+const Cart =() => {
+  //TODO - get cart items from context
+  
+  const {cartItems, removeFromCart, getCartTotal, updateItemQuantity } = useCart();
+  
   return (
     <div className="center mw7 mv4">
       <div className="bg-white pa3 mb3">
-        <h2 className="f2 mb2">Cart</h2>
-        <table className="w-100 ba pa2">
+       <h2 className="f2 mb2">Cart</h2>
+       <table className="w-100 ba pa2">
           <thead>
             <tr>
               <th className="tl pv2">Product</th>
